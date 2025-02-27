@@ -2,10 +2,9 @@
 {% load static %}
 
 {% block content %}
-    {{ name }}:
-        <ul>
-            {% for ingredient in ingredients%}
-            <li>{{ ingredient.name }} : {{ ingredient.quantity }}</li>
-            {% endfor %}
-        </ul>
+    <ol>
+        {% for recipe in recipe_list%}
+            <li><a href="/recipe/{{recipe.id}}">{{ recipe.name }}</a></li>
+        {% endfor %}
+    </ol>
 {% endblock %}
