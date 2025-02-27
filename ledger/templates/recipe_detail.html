@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block content %}
-    <ol>
-        {% for recipe in recipe_list%}
-            <li><a href="/recipe/{{recipe.id}}">{{ recipe.name }}</a></li>
+    {{ object.name }}
+    <ul>
+        {% for ingredient in object.ingredients.all %}
+            <li>{{ ingredient.ingredient.name }} : {{ ingredient.quantity }}</li>
         {% endfor %}
-    </ol>
+    </ul>
 {% endblock %}
