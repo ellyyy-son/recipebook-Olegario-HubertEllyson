@@ -12,7 +12,7 @@
             <li>{{ ingredient.ingredient.name }} : {{ ingredient.quantity }}</li>
         {% endfor %}
     </ul>
-    {% if object.task_image %}
-        <img src="{{ object.task_image.url }}" alt="">
+    {% if recipe.task_image %}
+        <img src="{{ recipe.task_image.url }}" alt="">
     {% endif %}
 {% endblock %}
