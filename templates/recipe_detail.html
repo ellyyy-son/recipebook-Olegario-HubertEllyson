@@ -12,9 +12,7 @@
             <li>{{ ingredient.ingredient.name }} : {{ ingredient.quantity }}</li>
         {% endfor %}
     </ul>
-{% endblock %}
-{% block main %}
-    {% if recipe.image %}
-        <img src="{{ recipe.image.url }}" alt="">
-    {% endif %}
+    {% for image in recipe.image.all %}
+        <img src="{{ image.recipe_image.url }}" alt="{{ img.description }}">
+    {% endfor %}
 {% endblock %}

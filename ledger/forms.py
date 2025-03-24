@@ -1,8 +1,8 @@
 from django import forms
-from .models import Task
+from .models import Recipe
 
 
-class TaskForm(forms.ModelForm):
+class RecipeForm(forms.ModelForm):
     class Meta:
-        model = Task
+        model = Recipe
         fields = '__all__'
