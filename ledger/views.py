@@ -45,7 +45,7 @@ class RecipeUpdateView(LoginRequiredMixin, UpdateView):
         form = RecipeImageForm(request.POST, request.FILES)
         if form.is_valid():
             recipe_image = form.save(commit=False)
-            recipe_image.recipe = self.get_object()
+            recipe_image.recipe = Recipe.objects.get(pk = self.kwargs['pk'])
             recipe_image.save()
             return redirect(self.get_success_url())
         else:
