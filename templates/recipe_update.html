@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} {{ recipe.name }} {% endblock %}
+{% block title %} Add a Picture {% endblock %}
 
 {% block content %}
 <h1> Upload a New Image: </h1>
@@ -10,6 +10,6 @@
     {{ form.as_p }}
     <input type="submit" value="Submit">
 </form>
-<p> <a href="{% url 'ledger:recipe_detail' recipe.pk %}"> Return to the recipe </a> </p>
+<p> <a href="{% url 'ledger:recipe_detail' recipe.pk %}"> Return to the Recipe </a> </p>
 {% endblock %}
 

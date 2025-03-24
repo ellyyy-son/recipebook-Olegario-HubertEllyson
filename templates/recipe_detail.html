@@ -16,6 +16,7 @@
         <img src="{{ image.image.url }}" alt="{{ image.description }}">
     {% endfor %}
 
-    <p> <a href="{% url 'ledger:recipe_update' recipe.pk %}"> Add an image to the recipe </a> </p>
+    <p> <a href="{% url 'ledger:recipe_update' recipe.pk %}"> Add an Image to the Recipe </a> </p>
+    <p> <a href="{% url 'ledger:recipe_list' %}"> Return to the List </a> </p>
 
 {% endblock %}
