@@ -4,10 +4,12 @@
 {% block title %} {{ recipe.name }} {% endblock %}
 
 {% block content %}
-<form method="post">
+<h1> Upload a New Image: </h1>
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
     <input type="submit" value="Submit">
 </form>
+<p> <a href="{% url 'ledger:recipe_detail' recipe.pk %}"> Return to the recipe </a> </p>
 {% endblock %}
 
